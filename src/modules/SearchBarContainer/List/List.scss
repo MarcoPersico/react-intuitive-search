@@ -1,0 +1,61 @@
+.List {
+  &_container {
+    background-color: white;
+    width: 100%;
+    margin-top: 5px;
+    min-height: 40px;
+    border: 1px solid rgb(160, 160, 160);
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 40px;
+    z-index: 10;
+    transition: all 400ms;
+  }
+
+  &_button {
+    cursor: pointer;
+    border: none;
+    background-color: unset;
+    height: 30px;
+    transition: background-color 200ms;
+    text-align: left;
+
+    &:hover {
+      color: white;
+      background-color: #55bbff;
+    }
+  }
+
+  &_buttonContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_options {
+    max-height: 150px;
+    overflow-y: scroll;
+  }
+
+  &_footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #868686;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 400ms;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
