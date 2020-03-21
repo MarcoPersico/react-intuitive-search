@@ -1,45 +1,59 @@
 .List {
   &_container {
-    background-color: white;
     width: 100%;
-    margin-top: 5px;
-    min-height: 40px;
-    border: 1px solid rgb(160, 160, 160);
     box-sizing: border-box;
     position: relative;
     padding-bottom: 40px;
     z-index: 10;
-    transition: all 400ms;
+
+    &_styleable {
+      background-color: white;
+      border: 1px solid rgb(160, 160, 160);
+      box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.65);
+      transition: all 400ms;
+      border-radius: 5px;
+      min-height: 40px;
+      margin-top: 5px;
+    }
   }
 
   &_button {
     cursor: pointer;
     border: none;
-    background-color: unset;
-    height: 30px;
-    transition: background-color 200ms;
-    text-align: left;
+    z-index: 0;
 
-    &:hover {
-      color: white;
-      background-color: #55bbff;
+    &_styleable {
+      transition: background-color 200ms;
+      height: 40px;
+      padding: 0 1.5%;
+      text-align: left;
+      background-color: unset;
+
+      &:hover {
+        color: white;
+        background-color: #55bbff;
+      }
     }
   }
 
   &_buttonContainer {
     display: flex;
     flex-direction: column;
+    z-index: 0;
   }
 
   &_options {
-    max-height: 150px;
+    max-height: 220px;
     overflow-y: scroll;
   }
 
   &_footer {
+    border-radius: 0px 0px 5px 5px;
     width: 100%;
     position: absolute;
     bottom: 0;
+    left: 1%;
+    width: 98%;
     display: flex;
     height: 40px;
     justify-content: center;
@@ -47,6 +61,9 @@
     font-size: 14px;
     font-weight: bold;
     color: #868686;
+    background-color: white;
+    border-top: 1px solid rgb(160, 160, 160);
+    z-index: 10;
   }
 }
 
@@ -56,6 +73,10 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

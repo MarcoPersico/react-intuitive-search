@@ -18,12 +18,14 @@ Not supports in Firefox and IE */
 /* total width */
 ::-webkit-scrollbar {
   background-color:#fff;
-  width:16px
+  width:16px;
+  border-radius: 5px;
 }
 
 /* background of the scrollbar except button or resizer */
 ::-webkit-scrollbar-track {
-  background-color:#fff
+  background-color:#fff;
+  border-radius: 5px;
 }
 
 /* scrollbar itself */
@@ -35,3 +37,10 @@ Not supports in Firefox and IE */
 
 /* set button(top and bottom of the scrollbar) */
 ::-webkit-scrollbar-button {display:none}
+
+.App {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 4fr 3fr 2fr 1fr;
+  justify-content: space-evenly;
+}

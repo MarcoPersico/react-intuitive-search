@@ -46,7 +46,18 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBarContainer async={true} onAsyncRequest={getData} options={mocked} isLoading={isLoading} />
+      <section className='aside'>
+        <SearchBarContainer async={true} onAsyncRequest={getData} options={mocked} isLoading={isLoading} />
+      </section>
+      <section className='aside'>
+        <SearchBarContainer async={false} onAsyncRequest={getData} options={mocked} isLoading={isLoading} />
+      </section>
+      <section className='aside'>
+        <SearchBarContainer async={true} onAsyncRequest={getData} options={mocked} isLoading={isLoading} />
+      </section>
+      <section className='aside'>
+        <SearchBarContainer async={false} onAsyncRequest={getData} options={mocked} isLoading={isLoading} />
+      </section>
     </div>
   );
 }
