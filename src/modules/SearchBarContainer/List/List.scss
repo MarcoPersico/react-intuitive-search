@@ -8,8 +8,8 @@
 
     &_styleable {
       background-color: white;
-      border: 1px solid rgb(160, 160, 160);
-      box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.65);
+      border: 1px solid rgb(255, 85, 85);
+      box-shadow: 0px 0px 6px 0px rgba(255, 85, 85, 0.25);
       transition: all 400ms;
       border-radius: 5px;
       min-height: 40px;
@@ -31,7 +31,7 @@
 
       &:hover {
         color: white;
-        background-color: #55bbff;
+        background-color: rgb(255, 85, 85);
       }
     }
   }
@@ -40,6 +40,10 @@
     display: flex;
     flex-direction: column;
     z-index: 0;
+
+    :first-child {
+      border-radius: 4px 0px 0px 0px;
+    }
   }
 
   &_options {
